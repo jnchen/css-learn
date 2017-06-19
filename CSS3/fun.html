@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3-3D</title>
+</head>
+<style type="text/css">
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    .light{ /*视角*/
+        margin-top:200px;
+        margin-left: 200px;
+        width:310px;
+        height:100px;
+        position:absolute;
+        perspective:500px;
+    }
+    .light .stage{ /*3d空间*/
+        position:relative;
+        width:310px;
+        height:100px;
+        transform-style:preserve-3d;
+        -webkit-transition: all 0.8s;
+    }
+    .light .stage .image1{
+        width:310px;
+        height:100px;
+        position:absolute;
+        -webkit-transform:translateZ(50px) ;
+    }
+    .light .stage .image2{
+        width:310px;
+        height:100px;
+        position:absolute;
+        -webkit-transform: rotateX(-90deg) translateZ(50px);
+    } 
+    .light .stage:hover{
+        -webkit-transform: rotateX(90deg);
+    }
+</style>
+<body>
+    <div class="light">
+        <div class="stage">
+            <img class="image1" src="a.gif" />
+            <img class="image2" src="b.gif" />
+        </div>
+    </div>
+</body>
+</html>
