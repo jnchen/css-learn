@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oswald:700">
+	<meta name="viewport" content="width=device-width">
+	<title>Document</title>
+	<style type="text/css">
+		html,body{
+			margin: 0;
+			padding: 0;
+			font-family: 'Oswald',sans-serif;
+			color:#ebebeb;
+		}
+		.FlexWrapper{
+			background-color: indigo;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			-webkit-flex-direction: column;
+			-moz-flex-direction: column;
+			-ms-flex-direction: column;
+			-o-flex-direction: column;
+			flex-direction: column;
+		}
+		.FlexItem{
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			-ms-align-items: center;
+			align-items: center;
+			min-height: 6.25rem;
+			padding: 1rem;
+		}
+		.FlexHeader{
+			background-color:#105b63;
+			order:1;
+		}
+		.FlexCotnent{
+			background-color: #fffad5;
+			order:2;
+		}
+		.FlexSideOne{
+			background-color: #ffd34e;
+			order:3;
+		}
+		.FlexSideTwo{
+			background-color: #db9e36;
+			order:4;
+		}
+		.FlexFooter{
+			background-color: #BD4932;
+			order:5;
+		}
+		@media (min-width: 30rem){
+			.FlexWrapper{
+				flex-flow: row wrap;
+			}
+			.FlexHeader{
+				width: 100%;
+			}
+			.FlexContent{
+				-webkit-flex: 1;
+				-moz-flex: 1;
+				-ms-flex: 1;
+				-o-flex: 1;
+				flex: 1;
+				order: 3;
+			}
+			.FlexSideOne{
+				width: 150px;
+				order: 2;
+			}
+			.FlexSideTwo{
+				width: 150px;
+				order:4;
+			}
+			.FlexFooter{
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="FlexWrapper">
+		<div class="FlexItem FlexHeader">I am content in the Header.</div>
+		<div class="FlexItem FlexSideOne">I am content in the SideOne.</div>
+		<div class="FlexItem FlexContent">I am content in the Content.</div>
+		<div class="FlexItem FlexSideTwo">I am content in the SideTwo.</div>
+		<div class="FlexItem FlexFooter">I am content in the Footer.</div>
+	</div>
+</body>
+</html>
